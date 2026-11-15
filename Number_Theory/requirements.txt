@@ -1,0 +1,3 @@
+# The notebooks primarily use Python's standard library.
+matplotlib>=3.7
+jupyter>=1.0
