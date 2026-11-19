@@ -2,7 +2,7 @@
 
                                           Name: Abdur Rahim  
                                           Student ID: IT22053  
-Course/Workshop: Number Theory and Cryptography  
+ 
 
 
 ---
@@ -55,6 +55,8 @@ Course/Workshop: Number Theory and Cryptography
 
 ---
 
+
+
 ## 1. Introduction to Number Theory
 
 Number theory is the branch of mathematics that studies integers and their properties. It investigates divisibility, prime numbers, greatest common divisors, remainders, congruences, and integer equations.
@@ -71,6 +73,8 @@ These ideas are important in computer science because algorithms often need to w
 | Odd integers | Integers not divisible by 2 | -3, 1, 7 |
 | Prime numbers | Integers greater than 1 with exactly two positive divisors | 2, 3, 5, 7 |
 | Composite numbers | Integers greater than 1 with more than two positive divisors | 4, 6, 8, 9 |
+
+
 
 ### Python: basic integer properties
 
@@ -94,6 +98,9 @@ Square: 841
 
 ---
 
+
+
+
 ## 2. Divisibility, Factors and Multiples
 
 For integers `a` and `b`, with `a != 0`, we say that `a` divides `b` if there is an integer `k` such that:
@@ -114,6 +121,9 @@ If no such integer `k` exists, we write \(a \nmid b\).
 - A **multiple** is obtained by multiplying a number by an integer.
 - Example: \(4 \mid 20\), because \(20 = 4 \times 5\).
 - Example: \(6 \nmid 20\), because 20 is not divisible by 6 without a remainder.
+
+
+
 
 ### Python: list the positive divisors
 
@@ -139,6 +149,9 @@ print(divisors(24))
 
 ---
 
+
+
+
 ## 3. Greatest Common Divisor (GCD)
 
 The **greatest common divisor** of two integers (not both zero) is the largest positive integer that divides both numbers.
@@ -156,6 +169,9 @@ Examples:
 \]
 
 Two integers are called **coprime** or **relatively prime** when their GCD is 1.
+
+
+
 
 ### 3.1 Naive GCD Algorithm
 
@@ -186,6 +202,9 @@ print(gcd_naive(9, 17))
 8
 1
 ```
+
+
+
 
 ### 3.2 Euclid's Lemma and Subtraction Algorithm
 
@@ -227,6 +246,10 @@ print(gcd_subtraction(10, 6))
 ```text
 2
 ```
+
+
+
+
 
 ### 3.3 Euclid's Algorithm
 
@@ -275,6 +298,9 @@ print(gcd_euclid(790933790547, 1849639579327))
 ```
 
 The Euclidean algorithm is efficient: the number of iterations grows logarithmically with the size of the inputs. The workshop notes give a bound of at most \(\log_2 a+\log_2 b\) iterations for positive inputs.
+
+
+
 
 ### 3.4 Extended Euclidean Algorithm and Bézout's Identity
 
@@ -325,6 +351,9 @@ Verification: 2
 
 ---
 
+
+
+
 ## 4. Least Common Multiple (LCM)
 
 The **least common multiple** of two positive integers is the smallest positive integer divisible by both.
@@ -371,6 +400,9 @@ print(lcm(9, 17))
 Dividing before multiplying helps avoid unnecessarily large intermediate values in languages with fixed-size integers.
 
 ---
+
+
+
 
 ## 5. Diophantine Equations
 
@@ -429,6 +461,9 @@ True
 False
 ```
 
+
+
+
 ### 5.2 Finding All Solutions
 
 Suppose \(d=\gcd(a,b)\), \(a=dp\), \(b=dq\), and \((x_0,y_0)\) is one solution. Then all integer solutions are:
@@ -474,6 +509,9 @@ Left-hand side: 22
 ```
 
 ---
+
+
+
 
 ## 6. Modular Arithmetic and Remainders
 
@@ -578,6 +616,10 @@ Divisible by 9: True
 
 ---
 
+
+
+
+
 ## 7. Modular Multiplicative Inverse and Division
 
 A multiplicative inverse of \(a\) modulo \(n\) is an integer \(a^{-1}\) satisfying:
@@ -644,6 +686,10 @@ If \(\gcd(a,n)\ne1\), an inverse does not exist. For example, 3 has no inverse m
 
 ---
 
+
+
+
+
 ## 8. Chinese Remainder Theorem (CRT)
 
 The **Chinese Remainder Theorem** says that if \(a\) and \(b\) are coprime, then for any remainders \(r_a,r_b\), there is a unique solution modulo \(ab\) to:
@@ -692,6 +738,9 @@ Check modulo 5: 3
 For more than two pairwise-coprime moduli, the same idea can be applied repeatedly. CRT is also useful in computations with large integers by working with remainders modulo several coprime moduli.
 
 ---
+
+
+
 
 ## 9. Fast Modular Exponentiation
 
@@ -751,6 +800,10 @@ print(pow(7, 13, 11))  # Python's built-in modular exponentiation.
 
 ---
 
+
+
+
+
 ## 10. Fermat's Little Theorem
 
 **Fermat's Little Theorem:** If \(p\) is prime and \(p\nmid a\), then:
@@ -781,6 +834,9 @@ Expected value = 1
 ```
 
 ---
+
+
+
 
 ## 11. Euler's Totient Function
 
@@ -838,6 +894,9 @@ This simple implementation is intended for learning. More efficient methods use 
 
 ---
 
+
+
+
 ## 12. Euler's Theorem
 
 Euler's theorem generalizes Fermat's Little Theorem.
@@ -874,6 +933,9 @@ a^phi(n) mod n = 1
 The coprimality condition is essential.
 
 ---
+
+
+
 
 ## 13. Cryptography and Public-Key Idea
 
@@ -948,6 +1010,8 @@ This is a classroom demonstration only. Real RSA requires very large, securely g
 
 ---
 
+
+
 ## 14. Prime Numbers
 
 A **prime number** is a natural number greater than 1 that cannot be written as a product of two smaller natural numbers. Equivalently, it has exactly two positive divisors: 1 and itself.
@@ -957,6 +1021,9 @@ Examples: 2, 3, 5, 7, 11, 13, 17, 19.
 A **composite number** has more than two positive divisors. The number 1 is neither prime nor composite. The only even prime is 2.
 
 Prime numbers are the basic building blocks of positive integers. The Fundamental Theorem of Arithmetic says that every integer greater than 1 has a unique prime factorization, apart from the order of the factors.
+
+
+
 
 ### 14.1 Prime Distribution and Infinitude
 
@@ -990,6 +1057,9 @@ Remainder when divided by each listed prime: [1, 1, 1, 1, 1]
 ```
 
 This construction does not say that \(N\) itself must be prime; it says that none of the primes in the assumed complete list can divide it.
+
+
+
 
 ### 14.2 Dirichlet's Theorem and Prime Number Theorem
 
@@ -1042,6 +1112,9 @@ pi(1000) = 168
 x / ln(x) = 144.76
 ```
 
+
+
+
 ### 14.3 Prime Conjectures
 
 A **conjecture** is a mathematical statement believed to be true but not yet proved.
@@ -1087,6 +1160,9 @@ print("Goldbach pair for 28:", goldbach_pair(28))
 Goldbach pair for 28: (5, 23)
 ```
 
+
+
+
 ### 14.4 Generating Primes and Polynomial Examples
 
 The slides discuss the polynomial:
@@ -1120,6 +1196,9 @@ n=40, f(n)= 1681, prime=False
 The slides also mention a result of Matiyasevich concerning a polynomial in 10 variables. This is an advanced result and is not implemented in this beginner notebook.
 
 ---
+
+
+
 
 ## 15. Primality Testing
 
@@ -1155,6 +1234,9 @@ print(is_prime(91))
 True
 False
 ```
+
+
+
 
 ### 15.2 Sieve of Eratosthenes
 
@@ -1195,6 +1277,9 @@ print(sieve_of_eratosthenes(50))
 [2, 3, 5, 7, 11, 13, 17, 19, 23, 29, 31, 37, 41, 43, 47]
 ```
 
+
+
+
 ### 15.3 Wheel Factorization
 
 Wheel factorization skips candidate numbers that are divisible by small primes. The slides describe the **wheel of 30**, based on residues:
@@ -1215,6 +1300,10 @@ print(wheel_residues)
 ```text
 [1, 7, 11, 13, 17, 19, 23, 29]
 ```
+
+
+
+
 
 ### 15.4 Pseudoprimes and Fermat's Primality Test
 
@@ -1257,6 +1346,10 @@ print("91, base 2:", fermat_test(91, 2))
 91, base 2: False
 ```
 
+
+
+
+
 ### 15.5 Carmichael Numbers
 
 A **Carmichael number** is a composite positive integer \(n\) for which:
@@ -1294,6 +1387,10 @@ print("561 passes all coprime bases:", passes_all_coprime_fermat_bases(561))
 561 passes all coprime bases: True
 ```
 
+
+
+
+
 ### 15.6 Lucas' Primality Test and the n-1 Test
 
 The slides present Lucas' theorem in the following form. Let \(n>1\). If for every prime factor \(q\) of \(n-1\), there is an integer \(a\) such that:
@@ -1329,6 +1426,10 @@ for q in [2, 3]:
 q=2, witnesses=[3, 5, 6]
 q=3, witnesses=[2, 3, 4, 5]
 ```
+
+
+
+
 
 ### 15.7 Lucas-Lehmer Test and Mersenne Primes
 
@@ -1383,6 +1484,10 @@ p=13, 2^p-1 prime? True
 
 ---
 
+
+
+
+
 ## 16. Further Properties of Prime Numbers
 
 ### 16.1 Primitive Roots and Multiplicative Order
@@ -1426,6 +1531,10 @@ Order of 2 modulo 7: 3
 
 Since the order is 3 rather than 6, 2 is not a primitive root modulo 7.
 
+
+
+
+
 ### 16.2 Prime Characterizations
 
 The prime-number slides list several equivalent characterizations for \(p>1\):
@@ -1449,6 +1558,10 @@ Solutions of x^2 = 1 (mod 7): [1, 6]
 ```
 
 ---
+
+
+
+
 
 ## 17. Divisor Functions and Antiprimes
 
@@ -1524,6 +1637,10 @@ print(highly_composite_numbers(60))
 
 ---
 
+
+
+
+
 ## 18. Fundamental Theorem of Arithmetic
 
 The **Fundamental Theorem of Arithmetic** states that every integer greater than 1 can be represented as a product of prime numbers in exactly one way, apart from the order of the factors.
@@ -1564,6 +1681,10 @@ print(prime_factorization(60))
 ```
 
 ---
+
+
+
+
 
 ## 19. Practice Problems
 
@@ -1610,12 +1731,19 @@ print("10. Factorization:", prime_factorization(2024))
 
 ---
 
+
+
+
+
 ## 20. References and Scope Notes
 
 ### Uploaded study materials
 
 1. **Number_therory2.pdf** — 308-page number theory and cryptography workshop material. Topics covered include GCD, Euclid's and Extended Euclid's algorithms, LCM, Diophantine equations, modular division, remainders, Chinese Remainder Theorem, fast modular exponentiation, Fermat's Little Theorem, Euler's totient function and Euler's theorem.
 2. **Number_theory3.pdf** — 25-page *Prime Numbers* presentation by the Maths and Physics Club, IIT Bombay (December 24, 2020). Topics include prime distribution, infinitude of primes, Dirichlet's theorem, the Prime Number Theorem, conjectures, primality testing, pseudoprimes, Carmichael numbers, Lucas tests, Mersenne primes, divisor functions and antiprimes.
+
+
+
 
 ### Important notes
 
