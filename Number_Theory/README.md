@@ -1753,9 +1753,12 @@ print("10. Factorization:", prime_factorization(2024))
 - The RSA example uses tiny numbers only to demonstrate the mathematics. It is not secure for real-world use.
 - A finite program output can illustrate a theorem or conjecture, but it cannot prove a statement about infinitely many integers.
 
-**Prepared by:** Abdur Rahim  
-**Student ID:** IT22053
-
-Google Colab Link:  https://colab.research.google.com/drive/1ALSM-fsML2o8dhPTRAHwMUBCYkXgPDpo
 
 
+
+
+Google Colab Link:   https://colab.research.google.com/drive/1ALSM-fsML2o8dhPTRAHwMUBCYkXgPDpo
+
+
+**Name:** Md. Abdur Rahim  
+**ID:** IT22053
