@@ -1755,3 +1755,7 @@ print("10. Factorization:", prime_factorization(2024))
 
 **Prepared by:** Abdur Rahim  
 **Student ID:** IT22053
+
+Google Colab Link:  https://colab.research.google.com/drive/1ALSM-fsML2o8dhPTRAHwMUBCYkXgPDpo
+
+
